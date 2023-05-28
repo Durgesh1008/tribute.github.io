@@ -1,0 +1,94 @@
+<?php
+include("connection.php");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form2.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <div id="msg1"></div>
+    <div id="reloader"></div>
+
+    <head>
+        <h2 data-aos="slide-left" data-aos-duration="1000">Wel<span class="t">come</span><span class="o">:)</span> </h2>
+    </head>
+    <div class="container">
+        <form onsubmit="return check()" name="far" data-aos="slide-right" data-aos-duration="1000" onclick="myFunc()">
+            <h3>Nothing can ever take away a love the heart holds dear </h3>
+            <label class="ll">First Name :</label>
+            <input type="text" id="username" name="uname" placeholder="Your Name">
+            <label for="ryt" id="un" style="visibility: hidden; color:red">Please Enter Your Name</label>
+            <label class="ll">Email : </label>
+            <input type="email" name="uem" id="myem" placeholder="abc@gmail.com">
+            <label for="ryt" id="ue" style="visibility: hidden; color:red">Please Enter Your email</label>
+            <label class="ll">Mobile No : </label>
+            <input type="tel" name="mob" id="mymo" placeholder="00000-00000">
+            <label for="ryt" id="um" style="visibility: hidden; color:red">Please Enter Your email</label>
+            <label class="ll">Select City : </label>
+            <select name="select" id="myse" name="city">
+                <option value="Select">Select City</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Madhya pradesh">Madhya pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+            </select>
+
+            <label class="ll">Age : </label>
+            <input type="number" name="age" id="myage">
+            <label for="ryt" id="ua" style="visibility: hidden; color:red">Please Enter Your age</label>
+
+
+            <textarea name="msg" id="message" cols="0" rows="5" placeholder="Write your thought.."></textarea>
+
+            <div class="b">
+                <button type="submit" onclick="SendEmail()">Submit</button>
+                <button type="reset" class="h">Reset</button>
+            </div>
+        </form>
+    </div>
+    <h1 id="msg"></h1>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+        function SendEmail() {
+
+                let name = document.getElementById("username").value;
+                let email = document.getElementById("myem").value;
+                let contact = document.getElementById("mymo").value;
+                let message = document.getElementById("message").value;
+                let age = document.getElementById("myage").value;
+
+                let body = "Name : " + name + "<br/> Email : " + email + "<br/> Contact Number : " + contact + "<br/> age : " + age + "<br/> Message : " + message;
+                console.log(body)
+                Email.send({
+                    SecureToken: "fa1bcfb2-c6a7-45dd-8dbe-b4a7bf0fe2f9",
+                    To: 'dk1570801@gmail.com',
+                    From: "dk1570801@gmail.com",
+                    Subject: "Message From Contact Form",
+                    Body: body
+                }).then(
+                    message => alert(message)
+                );
+            }
+    </script>
+
+</body>
+<script src="./form2.js"></script>
+
+</html>

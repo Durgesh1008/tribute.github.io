@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*{
+    background-color: rgb(210, 241, 84);
+
+}
+
+.tg{
+    display: flex;
+    padding-bottom: 35px;
+}
+.og{
+    display: flex;
+    padding-bottom: 50px;
+}
+.c1{
+    font-size: 20px;
+    font-family: monospace;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 2%;
+    background-color: rgb(243, 37, 37);
+}
+.im1{
+    padding-top: 5%;
+    padding-bottom: 1%;
+}
+img{
+    border-radius: 20px;
+    box-shadow: 0 0 8px 8px red;
+}
+.head{
+    padding-left: 13%;
+}
+.cont h2{
+    padding-left: 13px;
+    padding-bottom: 1%;
+    font-family:monospace;
+    font-variant: small-caps;
+    font-size: 25px;
+}
+.h{
+    padding-left: 30%;
+}
+.btn{
+    padding-left: 70px;
+}
+
+button[type=submit]{
+    height: 30px;
+    width: 80px;
+    font-size: 17px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: monospace;
+    box-shadow: 0 0 5px 5px green;
+    transition: .5s;
+}
+
+button[type=submit]:hover{
+    text-transform: uppercase;
+    color: #fdfafa;
+    letter-spacing: .15em;
+    transition: .5s;
+    font-size: 12px;
+}
+.searchBx{
+
+    position: relative;
+    /* width: 100%; */
+    margin-top: 20px;
+    padding-left: 30%;
+}
+.query{
+    width: 50%;
+    padding: 13px;
+    border: 1px solid rgb(4, 4, 4);
+    outline: none;
+    font-size: 16px;
+    border-radius: 30px;
+    background-color: #ccc;
+}
+.icons{
+    position: absolute;
+    top: 0;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    align-items: center;
+    pointer-events: none;
+}
+.icons img{
+    max-width: 100%;
+
+}
+.searchBtn{
+    margin: 0 5px;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #54e70a;
+    outline: none;
+    background-color: gray;
+    color: black;
+    border-radius: 10px;
+}
+.button1{
+    padding-left: 45%;
+    padding-bottom: 20px;
+}
+.searchBtn:hover{
+    border: 1px solid #ea0707;
+    opacity: 0.5;
+}
+
+label{
+    font-size: 18px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding-left: 35%;
+    padding-bottom: 25px;
+}
+span{
+    color: red;
+    font-family: monospace;
+    font-size: 25px;
+}
+
+.ft{
+    background-color: black;
+    padding: 12px 20px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+.ft:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #ea0707;
+}
+
